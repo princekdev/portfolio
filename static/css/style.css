@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: 'Cinzel', serif;
+  font-weight: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 3vw 13vw;
+  background-color: rgba(1, 3, 8, 1);
+  text-align: center;
+}
+
+.section-heading-title {
+  font-size: 2vw;
+  padding: 2vw 0px;
+}
+
+p,
+a {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.2vw;
+}
+
+h4 {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* ----------------------------------------
+    Header
+   ---------------------------------------- */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  height: 4vw;
+  padding: 0px 13vw;
+  background: rgba(1, 3, 8, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.514);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: slide-left-fade-in 1s linear forwards;
+}
+
+nav ul {
+  display: flex;
+  gap: 1vw;
+}
+
+nav li a {
+  font-size: 1vw;
+}
+
+nav li:hover a {
+  color: grey;
+  transition: 0.3s ease-in-out;
+}
+
+.logo {
+  font-size: 1.5vw;
+  font-weight: 700;
+  animation: slide-right-fade-in 1s linear forwards;
+}
+
+@keyframes slide-right-fade-in {
+  0% {
+    transform: translateX(-2vw);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-fade-in {
+  0% {
+    transform: translateX(2vw);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0vw);
+    opacity: 1;
+  }
+}
+
+
+/* ----------------------------------------
+    Home
+   ---------------------------------------- */
+
+#home {
+  height: 32vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4vw;
+  background: image-set("../images/bg.jpg") rgba(0, 0, 0, 0.8);
+  /* https://wallpaperaccess.com/full/5651999.jpg */
+  background-size: 120vw;
+  background-position-y: -10vw;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+  animation: bg-move 10s linear infinite;
+}
+
+@keyframes bg-move {
+  0% {
+    background-position-y: -10vw;
+  }
+
+  50% {
+    background-position-y: 0vw;
+  }
+
+  100% {
+    background-position-y: -10vw;
+  }
+}
+
+
+#home h1 {
+  font-size: 3vw;
+  font-weight: bold;
+  border-right: 0.3vw solid rgb(212, 212, 212);
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 1.5s steps(21, end), blink-caret 0.75s step-end infinite;
+}
+
+.hi-text {
+  font-size: 5vw;
+  font-weight: bold;
+  color: rgb(212, 212, 212);
+}
+
+.name-text {
+  font-size: 4vw;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: grey;
+  }
+}
+
+
+/* ----------------------------------------
+    About
+   ---------------------------------------- */
+
+#about p {
+  color: rgb(212, 212, 212);
+}
+
+/* ----------------------------------------
+    Skills
+   ---------------------------------------- */
+
+#skills {
+  padding-bottom: 5vw;
+}
+
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2vw;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 0.5vw;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
+.skill-card h4 {
+  font-size: 1.5vw;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+}
+
+/* ----------------------------------------
+    Projects
+   ---------------------------------------- */
+
+#project {
+  padding-bottom: 5vw;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 0.5vw;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 2vw 0px;
+  position: relative;
+  top: -7vw;
+  margin-bottom: -7vw;
+  transition: 0.5s ease-in-out;
+  transform: translateY(100px);
+  text-align: center;
+}
+
+.card h4 {
+  font-size: 1.5vw;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  opacity: 0.8;
+}
+
+.card:hover .card-content {
+  background: white;
+  color: black;
+  transform: translateY(0px);
+}
+
+
+
+/* ----------------------------------------
+    Contact us
+   ---------------------------------------- */
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vw;
+  margin-bottom: -3vw;
+  background: image-set("../images/bg2.jpg") rgba(0, 0, 0, 0.8);
+  /* https://media.istockphoto.com/photos/-picture-id1311934969?k=6&m=1311934969&s=170667a&w=0&h=i0Lm9EfUfdZ95-VWnKauM4lgPUDul1oI9yDa7RUkIt0= */
+  background-blend-mode: darken;
+  background-size: 120vw;
+  background-attachment: fixed;
+  text-align: center;
+  animation: bg-move-2 10s linear infinite;
+}
+
+@keyframes bg-move-2 {
+  0% {
+    background-position-x: -10vw;
+  }
+
+  50% {
+    background-position-x: 0vw;
+  }
+
+  100% {
+    background-position-x: -10vw;
+  }
+}
+
+#contact .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact h2 {
+  font-size: 4vw;
+  margin: 2vw 0;
+}
+
+#contact a {
+  margin: 0.5vw 0vw;
+  color: rgb(212, 212, 212);
+}
+
+
+/* ----------------------------------------
+    Footer
+   ---------------------------------------- */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(1, 3, 8, 0.5);
+  border-top: 1px solid rgb(1, 3, 8);
+  color: grey;
+  height: 3vw;
+}
+
+footer span {
+  font-size: 1vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* ----------------------------------------
+    Media Queries
+   ---------------------------------------- */
+
+@media (max-width: 1200px) {
+  header {
+    padding: 0px 8vw;
+    height: 5vw;
+  }
+
+  .logo {
+    font-size: 2.5vw;
+  }
+
+  nav li a {
+    font-size: 2vw;
+  }
+
+  section {
+    padding: 2vw 8vw;
+  }
+
+  nav li a {
+    font-size: 1.7vw;
+  }
+
+  p,
+  a {
+    font-size: 2vw;
+  }
+
+  .section-heading-title {
+    font-size: 2.5vw;
+  }
+
+  #home {
+    margin-top: -5vw;
+    height: 50vw;
+  }
+
+  .skill-container {
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    gap: 1vw;
+  }
+
+  .skill-card h4 {
+    font-size: 2vw;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    gap: 1vw;
+  }
+
+  .card h4 {
+    font-size: 2vw;
+  }
+
+  #contact {
+    height: 50vw;
+    margin-bottom: -5vw;
+  }
+
+  footer {
+    height: 5vw;
+  }
+
+  footer span {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 0px 5vw;
+    height: 10vw;
+    justify-content: left;
+  }
+
+  .logo {
+    font-size: 4.5vw;
+    /* animation: none; */
+  }
+
+  nav {
+    display: none;
+  }
+
+  #home {
+    margin-top: -10vw;
+  }
+
+  #home h1 {
+    font-size: 4vw;
+    transform: translateY(3vw);
+  }
+
+  .hi-text {
+    font-size: 7vw;
+  }
+
+  .name-text {
+    font-size: 6vw;
+  }
+
+  section {
+    padding: 2vw 5vw;
+    /* min-height: 45vw !important; */
+  }
+
+  .section-heading-title {
+    font-size: 5vw;
+  }
+
+  p,
+  a {
+    font-size: 3.5vw;
+  }
+
+  .skill-container {
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    gap: 1vw;
+  }
+
+  .skill-card h4 {
+    font-size: 4vw;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    gap: 1vw;
+  }
+
+  .card h4 {
+    font-size: 3.5vw;
+  }
+
+  #contact {
+    margin-bottom: -7vw;
+    min-height: 55vw;
+  }
+
+  #contact h2 {
+    font-size: 6vw;
+  }
+
+  footer {
+    height: 7vw;
+  }
+
+  footer span {
+    font-size: 2.5vw;
+  }
+}
