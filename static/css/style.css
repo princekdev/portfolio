@@ -468,7 +468,7 @@ footer span {
   }
 
   .section-heading-title {
-    font-size: 5vw;
+    font-size: 5vw !important;
   }
 
   p,

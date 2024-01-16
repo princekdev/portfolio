@@ -1,0 +1,133 @@
+/******************************
+  style.css Modification
+ ******************************/
+
+header {
+  background: black;
+}
+
+nav {
+  animation: none;
+}
+
+button{
+  animation: none !important;
+}
+
+.logo {
+  animation: none;
+}
+
+section {
+  background: white;
+}
+
+span,h2,td{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.section-heading-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2vw;
+}
+
+footer {
+  background: black;
+}
+
+footer span{
+  color: white;
+}
+
+/******************************
+  employee.css
+ ******************************/
+
+#employee{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 7vw);
+}
+
+.verified{
+  width: 100vw;
+}
+
+.verified img{
+  width: 100%;
+}
+
+#employee .section-heading-title{
+  color: black;
+}
+
+#employee .details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+table{
+  font-size: 1.2vw;
+}
+
+table a{
+  color: rgb(44,143,242);
+  font-size: 1.2vw;
+}
+
+#achievement{
+  color: rgb(37, 37, 37);
+  font-size: 1.4vw;
+  margin: 0vw 0vw 1.5vw 0vw;
+}
+
+@media (max-width: 1200px) {
+  #employee{
+    flex-direction: column;
+    height: calc(100dvh - 10vw) !important;
+  }
+  h2{
+    font-size: 4vw !important;
+  }
+  #achievement{
+    font-size: 3vw;
+    margin-bottom: 7vw;
+  }
+  .verified{
+    width: 60vw;
+  }
+  table{
+    font-size: 2.6vw;
+  }
+  table a{
+    font-size: 2.6vw;
+  }
+}
+
+@media (max-width: 500px) {
+  #employee{
+    height: calc(100dvh - 17vw) !important;
+  }
+  h2{
+    font-size: 15vw !important;
+  }
+  #achievement{
+    font-size: 4.5vw !important;
+    margin-bottom: 7vw;
+  }
+  .verified{
+    width: 80vw;
+  }
+  table{
+    font-size: 4vw;
+  }
+  table a{
+    font-size: 4vw;
+  }
+}
