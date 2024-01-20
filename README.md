@@ -1,7 +1,7 @@
 <h2 align="center">
   Portfolio Website<br/>
-  <a href="https://princekdev.github.io/portfolio" target="_blank">princekdev.github.io/portfolio</a>
 </h2>
+<h3><a href="https://princekdev.github.io/portfolio" target="_blank">princekdev.github.io/portfolio</a></h3>
 <div align="center">
   <img alt="Demo" src="./Images/readme-img1.png" />
 </div>
