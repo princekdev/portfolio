@@ -5,7 +5,7 @@
   <a href="https://princekdev.github.io/portfolio" target="_blank">princekdev.github.io/portfolio</a>
 </h3>
 <div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
+  <img alt="Demo" src="README/portfolio.png" />
 </div>
 
 <br/>
