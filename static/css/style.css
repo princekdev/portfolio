@@ -227,8 +227,12 @@ nav li:hover a {
 
 .experience-container {
   display: grid;
-  grid-template-columns: 30% auto;
+  grid-template-columns: auto 30%;
   gap: 5%;
+}
+
+.experience-container> :nth-child(0) {
+  grid-column: span 2;
 }
 
 .experience {
@@ -332,9 +336,6 @@ nav li:hover a {
   gap: 5%;
 }
 
-.project-container> :first-child{
-  grid-column: span 2;
-}
 
 /* ----------------------------------------
     Skills
@@ -484,7 +485,7 @@ footer span {
     height: 50vw;
   }
 
-  #experience{
+  #experience {
     min-height: initial !important;
   }
 
@@ -501,7 +502,7 @@ footer span {
     gap: 2vw !important;
   }
 
-  .skill-card{
+  .skill-card {
     border-radius: 7px;
   }
 
@@ -565,11 +566,12 @@ footer span {
   }
 
   section {
-    padding: 2vw 5vw;
+    padding: 5vw 5vw !important;
   }
 
   .section-heading {
     font-size: 5vw !important;
+    margin-bottom: 3%;
   }
 
   p,
@@ -586,31 +588,41 @@ footer span {
     font-size: 3.5vw;
   }
 
-  #project{
+  #project {
     padding-bottom: 10vw;
   }
 
   .experience-container {
-    grid-template-columns: 40% auto;
-    gap: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
   }
 
-  .experience{
+  .experience-container .card {
+    height: 45vw;
+    overflow: hidden;
+  }
+
+  .experience-container img {
+    height: initial;
+  }
+
+  .experience {
     padding: 5%;
     border-radius: 5px;
   }
 
-  .experience h3{
-    font-size: 10px;
+  .experience h3 {
+    font-size: 3.8vw !important;
   }
 
-  .about-experience{
-    font-size: 7px;
-    margin-left: 10px;
+  .about-experience {
+    font-size: 3.4vw;
+    margin-left: 5%;
   }
 
-  .experience span{
-    font-size: 7px;
+  .experience span {
+    font-size: 3.2vw;
   }
 
   .project-container {
@@ -618,7 +630,7 @@ footer span {
     gap: 6%;
   }
 
-  .card{
+  .card {
     border-radius: 5px;
   }
 
@@ -628,7 +640,7 @@ footer span {
 
   #contact {
     margin-bottom: -7vw;
-    min-height: 70vw;
+    min-height: 80vw;
   }
 
   #contact h2 {
