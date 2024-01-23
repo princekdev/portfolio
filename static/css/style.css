@@ -527,6 +527,7 @@ footer span {
   #contact {
     height: 50vw;
     margin-bottom: -5vw;
+    min-height: initial !important;
   }
 
   footer {
