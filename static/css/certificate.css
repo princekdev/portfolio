@@ -27,7 +27,7 @@ span,h2,td{
   color: black;
 }
 
-.section-heading-title {
+.section-heading {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2vw;
 }
@@ -60,7 +60,7 @@ footer span{
   width: 100%;
 }
 
-#employee .section-heading-title{
+#employee .section-heading{
   color: black;
 }
 
