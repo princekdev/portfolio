@@ -246,20 +246,14 @@ nav li:hover a {
   height: 100%;
 }
 
-.experience span {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1vw;
-  margin-top: 5%;
-}
-
 .experience h3 {
   width: 100%;
-  color: rgb(207, 207, 207);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
 }
 
 .about-experience {
+  color: rgb(212, 212, 212);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.2vw;
   list-style-type: disc;
@@ -269,6 +263,13 @@ nav li:hover a {
 
 .about-experience li {
   text-align: left;
+}
+
+.experience span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1vw;
+  margin-top: 5%;
+  color: rgb(212, 212, 212);
 }
 
 .card {
@@ -334,6 +335,10 @@ nav li:hover a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   gap: 5%;
+}
+
+.project-container> :nth-child(1) {
+  grid-column: span 2;
 }
 
 
@@ -613,16 +618,16 @@ footer span {
   }
 
   .experience h3 {
-    font-size: 3.8vw !important;
+    font-size: 4.2vw !important;
   }
 
   .about-experience {
-    font-size: 3.4vw;
+    font-size: 3.6vw;
     margin-left: 5%;
   }
 
   .experience span {
-    font-size: 3.2vw;
+    font-size: 3.4vw;
   }
 
   .project-container {
